@@ -33,7 +33,7 @@ useEffect(() => {
     const teacher = JSON.parse(localStorage.getItem("teacher") || "{}");
 
     fetch(
-      `https://iqbalia-connect.onrender.com//students?username=${teacher.username}`
+      `https://iqbalia-connect.onrender.com/students?username=${teacher.username}`
     )
       .then((res) => res.json())
       .then((data) => setStudents(data))
@@ -107,7 +107,7 @@ useEffect(() => {
     }));
 
     try {
-      await fetch("https://iqbalia-connect.onrender.com//manual-attendance", {
+      await fetch("https://iqbalia-connect.onrender.com/manual-attendance", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

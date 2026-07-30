@@ -11,7 +11,7 @@ export default function RecentStudents() {
   const [students, setStudents] = useState<Student[]>([]);
 
   useEffect(() => {
-    fetch("https://iqbalia-connect.onrender.com//students")
+    fetch("https://iqbalia-connect.onrender.com/students")
       .then((res) => res.json())
       .then((data) => {
         setStudents(data.slice(-5).reverse());

@@ -43,7 +43,7 @@ useEffect(() => {
   // ==========================
   const loadHolidays = async () => {
     try {
-      const res = await fetch("https://iqbalia-connect.onrender.com//holidays");
+      const res = await fetch("https://iqbalia-connect.onrender.com/holidays");
       const data = await res.json();
 
       setHolidays(data);
@@ -103,8 +103,8 @@ useEffect(() => {
     };
 
     const url = isEditing
-      ? `https://iqbalia-connect.onrender.com//holidays/${editingId}`
-      : "https://iqbalia-connect.onrender.com//holidays";
+      ? `https://iqbalia-connect.onrender.com/holidays/${editingId}`
+      : "https://iqbalia-connect.onrender.com/holidays";
 
     const method = isEditing ? "PUT" : "POST";
 
@@ -150,7 +150,7 @@ useEffect(() => {
     if (!window.confirm("Delete this holiday?")) return;
 
     try {
-      await fetch(`https://iqbalia-connect.onrender.com//holidays/${id}`, {
+      await fetch(`https://iqbalia-connect.onrender.com/holidays/${id}`, {
         method: "DELETE",
       });
 

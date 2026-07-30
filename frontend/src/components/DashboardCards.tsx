@@ -34,15 +34,15 @@ export default function DashboardCards() {
   const [attendance, setAttendance] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("https://iqbalia-connect.onrender.com//students")
+    fetch("https://iqbalia-connect.onrender.com/students")
       .then((res) => res.json())
       .then(setStudents);
 
-    fetch("https://iqbalia-connect.onrender.com//teachers")
+    fetch("https://iqbalia-connect.onrender.com/teachers")
       .then((res) => res.json())
       .then(setTeachers);
 
-    fetch("https://iqbalia-connect.onrender.com//attendance")
+    fetch("https://iqbalia-connect.onrender.com/attendance")
       .then((res) => res.json())
       .then(setAttendance);
   }, []);

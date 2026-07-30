@@ -54,7 +54,7 @@ useEffect(() => {
 
   const loadTeachers = async () => {
     try {
-      const res = await fetch("https://iqbalia-connect.onrender.com//teachers");
+      const res = await fetch("https://iqbalia-connect.onrender.com/teachers");
       const data = await res.json();
       setTeachers(data);
     } catch (err) {
@@ -90,8 +90,8 @@ useEffect(() => {
     }
 
     const url = isEditing
-      ? `https://iqbalia-connect.onrender.com//${editingId}`
-      : "https://iqbalia-connect.onrender.com//teachers";
+      ? `https://iqbalia-connect.onrender.com/${editingId}`
+      : "https://iqbalia-connect.onrender.com/teachers";
 
     const method = isEditing ? "PUT" : "POST";
 
@@ -143,7 +143,7 @@ useEffect(() => {
   const deleteTeacher = async (id: string) => {
     if (!window.confirm("Delete this teacher?")) return;
 
-    await fetch(`https://iqbalia-connect.onrender.com//teachers/${id}`, {
+    await fetch(`https://iqbalia-connect.onrender.com/teachers/${id}`, {
       method: "DELETE",
     });
 
