@@ -18,7 +18,7 @@ const app = express();
     origin: [
       "http://localhost:5173",
       "http://192.168.1.23:5173",
-      "https://iqbalia-connect.onrender.com",
+      "https://iqbalia-connect-frontend.onrender.com",
     ],
     credentials: true,
   })
