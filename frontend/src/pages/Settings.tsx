@@ -53,7 +53,7 @@ gracePeriod: 5,
 
   const loadSettings = async () => {
     try {
-      const res = await fetch("http://localhost:5000/settings");
+      const res = await fetch("https://iqbalia-connect.onrender.com//settings");
       const data = await res.json();
       setSettings(data);
     } catch (err) {
@@ -64,7 +64,7 @@ gracePeriod: 5,
 
   const saveSettings = async () => {
     try {
-      const res = await fetch("http://localhost:5000/settings", { 
+      const res = await fetch("https://iqbalia-connect.onrender.com//settings", { 
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

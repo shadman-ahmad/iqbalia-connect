@@ -202,7 +202,7 @@ async function startCapturing() {
     const teacherData = JSON.parse(localStorage.getItem("teacher") || "{}");
 
     fetch(
-      `http://localhost:5000/students?username=${teacherData.username}`
+      `https://iqbalia-connect.onrender.com//students?username=${teacherData.username}`
     )
       .then((res) => res.json())
       .then((data) => setStudents(data))
@@ -261,7 +261,7 @@ if (descriptors.length > 0) {
     const formData = new FormData();
     formData.append("photo", photoFile);
 
-    const uploadRes = await fetch("http://localhost:5000/upload", {
+    const uploadRes = await fetch("https://iqbalia-connect.onrender.com//upload", {
       method: "POST",
       body: formData,
     });
@@ -289,8 +289,8 @@ descriptors,     // New system
   };
 
   const url = isEditing
-    ? `http://localhost:5000/${editingRoll}`
-    : "http://localhost:5000/students";
+    ? `https://iqbalia-connect.onrender.com//${editingRoll}`
+    : "https://iqbalia-connect.onrender.com//students";
 
   const method = isEditing ? "PUT" : "POST";
 
@@ -346,7 +346,7 @@ const editStudent = (student: Student) => {
 const deleteStudent = (roll: number) => {
   if (!window.confirm("Delete this student?")) return;
 
-  fetch(`http://localhost:5000/students/${roll}`, {
+  fetch(`https://iqbalia-connect.onrender.com//students/${roll}`, {
     method: "DELETE",
   })
     .then(() => {

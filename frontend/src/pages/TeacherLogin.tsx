@@ -7,7 +7,7 @@ export default function TeacherLogin() {
 
   const login = async () => {
     try {
-      const res = await fetch("http://localhost:5000/teacher/login", {
+      const res = await fetch("https://iqbalia-connect.onrender.com//teacher/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

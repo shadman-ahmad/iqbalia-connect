@@ -19,7 +19,7 @@ useEffect(() => {
 
   const fetchAttendance = async () => {
     try {
-      const res = await fetch("http://localhost:5000/attendance");
+      const res = await fetch("https://iqbalia-connect.onrender.com//attendance");
       const data = await res.json();
       setRecords(data);
     } catch (err) {

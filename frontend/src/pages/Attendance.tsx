@@ -101,7 +101,7 @@ const [attendanceClosed, setAttendanceClosed] = useState(false);
     );
 
     const res = await fetch(
-      `http://localhost:5000/students?username=${teacher.username}`
+      `https://iqbalia-connect.onrender.com//students?username=${teacher.username}`
     );
 
     const data = await res.json();
@@ -112,7 +112,7 @@ const [attendanceClosed, setAttendanceClosed] = useState(false);
 
   async function loadAttendance() {
     const res = await fetch(
-      "http://localhost:5000/attendance"
+      "https://iqbalia-connect.onrender.com//attendance"
     );
 
     const data = await res.json();
@@ -131,7 +131,7 @@ const [attendanceClosed, setAttendanceClosed] = useState(false);
   }
 
   async function loadSetting() {
-  const res = await fetch("http://localhost:5000/settings");
+  const res = await fetch("https://iqbalia-connect.onrender.com//settings");
   const settings = await res.json();
 
   setAttendanceStartTime(settings.attendanceStartTime);
@@ -156,7 +156,7 @@ useEffect(() => {
 
       const today = new Date().toLocaleDateString();
 
-      await fetch("http://localhost:5000/attendance/mark-absent", {
+      await fetch("https://iqbalia-connect.onrender.com//attendance/mark-absent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -397,7 +397,7 @@ for (const saved of savedDescriptors) {
    return;
 }
         const response = await fetch(
-          "http://localhost:5000/attendance",
+          "https://iqbalia-connect.onrender.com//attendance",
           {
             method: "POST",
             headers: {

@@ -37,7 +37,7 @@ useEffect(() => {
 const loadAttendance = async () => {
   try {
     const res = await fetch(
-      `http://localhost:5000/attendance/${student.roll}`
+      `https://iqbalia-connect.onrender.com//attendance/${student.roll}`
     );
 
     const data = await res.json();
@@ -202,7 +202,7 @@ const loadAttendance = async () => {
   onClick={() => {
   if (!window.confirm("Delete this student?")) return;
 
-  fetch(`http://localhost:5000/students/${student.roll}`, {
+  fetch(`https://iqbalia-connect.onrender.com//students/${student.roll}`, {
     method: "DELETE",
   }).then(() => {
     alert("Student deleted successfully");

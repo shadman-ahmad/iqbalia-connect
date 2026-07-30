@@ -13,23 +13,23 @@ export default defineConfig({
   allowedHosts: true,
   proxy: {
     "/teacher": {
-      target: "http://localhost:5000",
+      target: "https://iqbalia-connect.onrender.com/",
       changeOrigin: true,
     },
     "/students": {
-      target: "http://localhost:5000",
+      target: "https://iqbalia-connect.onrender.com/",
       changeOrigin: true,
     },
     "/attendance": {
-      target: "http://localhost:5000",
+      target: "https://iqbalia-connect.onrender.com/",
       changeOrigin: true,
     },
     "/settings": {
-      target: "http://localhost:5000",
+      target: "https://iqbalia-connect.onrender.com/",
       changeOrigin: true,
     },
     "/holidays": {
-      target: "http://localhost:5000",
+      target: "https://iqbalia-connect.onrender.com/",
       changeOrigin: true,
     },
   },

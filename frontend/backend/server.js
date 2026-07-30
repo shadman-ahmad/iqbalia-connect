@@ -18,7 +18,7 @@ const app = express();
     origin: [
       "http://localhost:5173",
       "http://192.168.1.23:5173",
-      "http://localhost:5000",
+      "https://iqbalia-connect.onrender.com/",
     ],
     credentials: true,
   })
@@ -61,7 +61,7 @@ app.post("/upload", upload.single("photo"), (req, res) => {
   }
 
   res.json({
-    photo: `http://localhost:5000/uploads/${req.file.filename}`,
+    photo: `https://iqbalia-connect.onrender.com//uploads/${req.file.filename}`,
   });
 });
 
