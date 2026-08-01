@@ -289,7 +289,7 @@ descriptors,     // New system
   };
 
   const url = isEditing
-    ? `https://iqbalia-connect.onrender.com/${editingRoll}`
+    ? `https://iqbalia-connect.onrender.com/students/${editingRoll}`
     : "https://iqbalia-connect.onrender.com/students";
 
   const method = isEditing ? "PUT" : "POST";
