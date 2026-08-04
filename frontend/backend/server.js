@@ -252,8 +252,12 @@ const Teacher = mongoose.model("Teacher", teacherSchema);
 app.post("/students", async (req, res) => {
   try {
     console.log("Descriptors received:", req.body.descriptors?.length);
+    console.log("BODY RECEIVED:");
+console.log(req.body);
     const student = new Student(req.body);
     const savedStudent = await student.save();
+    console.log("Saved Student:");
+console.log(savedStudent);
     console.log(
   "Saved descriptors:",
   savedStudent.descriptors?.length
